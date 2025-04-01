@@ -1,6 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { provideRouter } from '@angular/router';
+import { appRoutes } from '../src/app/app.routes';
+import { DragonBallComponent } from '../src/app/dragon-ball/dragon-ball.component';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication(DragonBallComponent, {
+  providers: [
+    provideRouter(appRoutes)
+  ]
+});

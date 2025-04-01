@@ -1,0 +1,17 @@
+<div class="dragon-ball-container">
+    <h1>personaje de Dragon Ball</h1>
+  
+    <div *ngIf="gokuData">
+      <p><strong>Nombre:</strong> {{ gokuData.name }}</p>
+      <p><strong>Especie:</strong> {{ gokuData.race }}</p>
+      <p><strong>ki: </strong>{{ gokuData.ki }}</p>
+      <p><strong>Descripción:</strong> {{ gokuData.description }}</p>
+      
+      <img [src]="gokuData.image" alt="Goku" />
+    </div>
+  
+    <div *ngIf="!gokuData">
+      <p>Cargando información de Goku...</p>
+    </div>
+  </div>
+  
